@@ -6,12 +6,12 @@
  Footer at the bottom of the page even if the main content is small
 **********/
 
-/* using Flexbox */
-
+/* using Flexbox (my preferred method) */
+/* Set the body to be 100% of the viewport height and set the main content to grow to the biggest it can be (while still leaving the header and footer to be big enough to display their content) */
 /* body {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100vh; 
   padding: 0;
   margin: 0;
 }
@@ -51,7 +51,7 @@ img {
 **********/
 
 .cluster {
-  overflow: hidden;
+  overflow: hidden; /* prevent the negative margin from causing scroll bars to appear */
 }
 
 .cluster > * {
@@ -72,6 +72,8 @@ img {
 /**********
 Is there a way to transition-height (like transition-width) (ex. with a dropdown hamburger menu)
 **********/
+
+/* any and all transitions need to go from a fixed number to a fixed number; you can't transition `auto` */
 
 .height-transition {
   background-color: #333;
@@ -96,32 +98,32 @@ How do you have an image in a box that has text in the image but on the bottom o
 **********/
 
 .text-in-image {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
+  position: relative; /* this forces the text span to not exceed the container div */
+  display: inline-block; /* this makes the container div only as big as the largest content (the image) but won't have any elements next to it */
+  overflow: hidden; /* this allows for "zooming" in on the image witout it getting physically bigger on the screen */
 }
 
 .text-in-image > img {
-    transform: scale(1);
+    transform: scale(1); /* we need an initial state to transition from */
     transition: 1s ease-in-out;
 
 }
 
 .text-in-image > span {
   background-color: white;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
+  position: absolute; /* takes the span out of the normal flow */
+  bottom: 0; /* puts the text span on the bottom of the div, which is the bottom of the image */
+  left: 50%; /* this, with the translate below, puts the span in the center of the image */
   transform: scale(1) translateX(-50%);
-  text-align: center;
+  text-align: center; /* centers the text so it's not left-aligned */
   transition: color 1s, background-color 1s;
-  width: 100%;
+  width: 100%; /* the text span fills the entire width of the image */
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 
 .text-in-image > img:hover {
-  transform: scale(1.3);
+  transform: scale(1.3); /* state to transition to */
 }
 
 .text-in-image > img:hover ~ span {

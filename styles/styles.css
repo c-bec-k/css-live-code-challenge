@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+/**********
+ Footer at the bottom of the page even if the main content is small
+**********/
+
 /* using Flexbox */
 
 /* body {
@@ -39,7 +43,12 @@ img {
   max-width: 100%;
 }
 
-/* Consistant gap between flex items */
+
+
+
+/**********
+ Consistant gap between flex items (see https://every-layout.dev/)
+**********/
 
 .cluster {
   overflow: hidden;
@@ -57,7 +66,12 @@ img {
   margin: 0.5rem;
 }
 
-/* transition height */
+
+
+
+/**********
+Is there a way to transition-height (like transition-width) (ex. with a dropdown hamburger menu)
+**********/
 
 .height-transition {
   background-color: #333;
@@ -74,7 +88,12 @@ img {
   transform: scaleY(0.05);
 }
 
-/* How do you have an image in a box that has text in the image but on the bottom of the image? And when you hover the image, the image zooms in slightly, and the text gets a transparent black background around it? */
+
+
+
+/**********
+How do you have an image in a box that has text in the image but on the bottom of the image? And when you hover the image, the image zooms in slightly, and the text gets a transparent black background around it?
+**********/
 
 .text-in-image {
   position: relative;
@@ -87,7 +106,6 @@ img {
     transition: 1s ease-in-out;
 
 }
-
 
 .text-in-image > span {
   background-color: white;

@@ -1,2 +1,3 @@
-# css-live-code-challenge
-My first every live coding challenge
+# CSS Live Coding Challenge 20 March 2020
+
+Today I decided to ask other to challenge me to some CSS Shenanigans!

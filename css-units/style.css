@@ -1,0 +1,30 @@
+ *, *::before, *::after { background-origin: border-box; }
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  height: 10rem;
+}
+
+span {
+  border: 2px solid black;
+  height: var(--unit);
+  width: var(--unit);
+}
+
+.px { --unit: 16px; }
+
+.em { --unit: 1em; }
+
+.big { font-size: 1.5rem; }
+
+.rem { --unit: 1rem; }
+
+.ch { --unit: 1ch; }
+
+.percent { --unit: 20%; }
+.small { width: 50%; }
+
+.vw { --unit: 10vw; }
+
+.vh { --unit: 10vh; }
